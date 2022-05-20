@@ -38,7 +38,6 @@ public class StudentController {
     public String updateStudent(@PathVariable("studentId") Long studentId, @RequestBody StudentUpdateDTO json){
         String name = json.getName();
         String email = json.getEmail();
-        System.out.println("@@@@@@@@@@@@@@@@@@@@" + name + "@@@@@@@@@@@@@@@@" + email);
         return studentService.updatedStudent(studentId, name, email);
     }
 }
